@@ -42,5 +42,17 @@ function editHandler(val){
 
 function newEditHandler(val){
     console.log(val)
+    const li = document.getElementById(val)
+    li.children[0].innerHTML = listItemInput.value
+    submtBtn.textContent = 'Submit'
+    submtBtn.setAttribute('onclick', 'submitHandler()')
+    listItemInput.value = ''
+
     
+}
+
+
+function deleteHandler(){
+    let li = document.getElementById(val)
+    UnOrderedlist.removeChild(li)
 }
